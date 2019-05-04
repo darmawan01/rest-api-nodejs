@@ -3,8 +3,12 @@ import express from 'express';
 // POST, GET, PUT, DELETE
 const app = express()
     app.get('/', (req, res) => {
-        // res.json({"Messages":"Hy Guys !!!"})
-        res.sendfile('./index.html')
+        const data = {
+            "Messages": "Hy Guys !!!",
+            "Nama": "Darmawan"
+        };
+
+        res.json(data)
     });
 
 app.listen(5001, (err) => {
